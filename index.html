@@ -660,7 +660,7 @@
         const message = document.getElementById('message').value;
 
         // Send the data to Google Apps Script
-        fetch('https://script.google.com/macros/s/AKfycbzeqrbPblHo0m6GN_zyfdDuYI6uGrxCyVTfrJsc3CRv-1xNoqDjyXB_LZ-oBcVYw3_v/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbxkTV-lhGwkPBrRi_vr_TOMzyFvN1EwIn1jVpwc4DnxTovhRh5QtdppJ9xEdi5v_KYd/exec', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -674,15 +674,20 @@
         })
         .then(response => response.json())
         .then(data => {
-            console.log('Success:', data);
-            alert('Message sent successfully!');
+            if (data.result === 'success') {
+                alert('Message sent successfully!');
+            } else {
+                console.error('Error response:', data);
+                alert('There was an error sending your message.');
+            }
         })
         .catch((error) => {
-            console.error('Error:', error);
+            console.error('Fetch error:', error);
             alert('There was an error sending your message.');
         });
     });
 </script>
+
 
 
 
