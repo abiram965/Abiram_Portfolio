@@ -657,6 +657,9 @@
         const subject = document.getElementById('subject').value;
         const message = document.getElementById('message').value;
 
+        // Log the data to ensure it's correct
+        console.log('Form data:', { name, email, subject, message });
+
         // Send the data to Google Apps Script
         fetch('https://script.google.com/macros/s/AKfycbyjZBbEpNHGIdZ8fM9a5jSlZS0YPgu06IEmL_pIcDw/dev', {
             method: 'POST',
@@ -670,8 +673,12 @@
                 message: message
             })
         })
-        .then(response => response.json())
+        .then(response => {
+            console.log('Response status:', response.status);
+            return response.json();
+        })
         .then(data => {
+            console.log('Response data:', data);
             if (data.result === 'success') {
                 alert('Message sent successfully!');
             } else {
