@@ -660,7 +660,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     console.log('Form data:', { name, email, subject, message });
 
     // Send the data to Google Apps Script
-    fetch('https://script.google.com/macros/s/AKfycbxNUftUDg4nV8P4Txu60k_aS3Hnc5XbBoUhjn6AvVBsu2EX5AWl1FPycpxfadB-5o_W/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbyzzcKATn_WD5iU_hxsi0YqYnkVUB9PArCk28gYxNVpYBSs986frxk7i1CmpsYKithV/exec', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -690,6 +690,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         alert('There was an error sending your message.');
     });
 });
+
 
 </script>
 
