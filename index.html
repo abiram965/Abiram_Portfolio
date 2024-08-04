@@ -646,53 +646,52 @@
     </div>
 </div>
 <!-- Contact End -->
-
 <script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
 
-        // Capture the form data
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
+    // Capture the form data
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
 
-        // Log the data to ensure it's correct
-        console.log('Form data:', { name, email, subject, message });
+    // Log the data to ensure it's correct
+    console.log('Form data:', { name, email, subject, message });
 
-        // Send the data to Google Apps Script
-        fetch('https://script.google.com/macros/s/AKfycbyjZBbEpNHGIdZ8fM9a5jSlZS0YPgu06IEmL_pIcDw/dev', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                name: name,
-                email: email,
-                subject: subject,
-                message: message
-            })
+    // Send the data to Google Apps Script
+    fetch('https://script.google.com/macros/s/AKfycbxNUftUDg4nV8P4Txu60k_aS3Hnc5XbBoUhjn6AvVBsu2EX5AWl1FPycpxfadB-5o_W/exec', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: name,
+            email: email,
+            subject: subject,
+            message: message
         })
-        .then(response => {
-            console.log('Response status:', response.status);
-            return response.json();
-        })
-        .then(data => {
-            console.log('Response data:', data);
-            if (data.result === 'success') {
-                alert('Message sent successfully!');
-            } else {
-                console.error('Error response:', data);
-                alert('There was an error sending your message.');
-            }
-        })
-        .catch((error) => {
-            console.error('Fetch error:', error);
+    })
+    .then(response => {
+        console.log('Response status:', response.status);
+        return response.json();
+    })
+    .then(data => {
+        console.log('Response data:', data);
+        if (data.result === 'success') {
+            alert('Message sent successfully!');
+        } else {
+            console.error('Error response:', data);
             alert('There was an error sending your message.');
-        });
+        }
+    })
+    .catch((error) => {
+        console.error('Fetch error:', error);
+        alert('There was an error sending your message.');
     });
-</script>
+});
 
+</script>
 
 
 
