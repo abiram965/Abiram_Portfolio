@@ -578,8 +578,6 @@
 
     -->
     <!-- Testimonial End -->
-
-
 <!-- Contact Start -->
 <div class="container-xxl pb-5" id="contact">
     <div class="container py-5">
@@ -651,47 +649,43 @@
 
 <script>
     document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+        event.preventDefault(); // Prevent the default form submission
 
-    // Capture the form data
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
+        // Capture the form data
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
 
-    // Log form data for debugging
-    console.log('Form data:', { name, email, subject, message });
-
-    // Send the data to Google Apps Script
-    fetch('https://script.google.com/macros/s/AKfycbzp7I02qoNV7NDZBsZezJ_rOSOvTbKX9ZUb8wKHBLCkulMUoWlbR_YVV5CUI7Dh2d_c/exec', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            name: name,
-            email: email,
-            subject: subject,
-            message: message
+        // Send the data to Google Apps Script
+        fetch('https://script.google.com/macros/s/AKfycbyjZBbEpNHGIdZ8fM9a5jSlZS0YPgu06IEmL_pIcDw/dev', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                subject: subject,
+                message: message
+            })
         })
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Response data:', data); // Log response data for debugging
-        if (data.result === 'success') {
-            alert('Message sent successfully!');
-        } else {
-            console.error('Error response:', data);
+        .then(response => response.json())
+        .then(data => {
+            if (data.result === 'success') {
+                alert('Message sent successfully!');
+            } else {
+                console.error('Error response:', data);
+                alert('There was an error sending your message.');
+            }
+        })
+        .catch((error) => {
+            console.error('Fetch error:', error);
             alert('There was an error sending your message.');
-        }
-    })
-    .catch((error) => {
-        console.error('Fetch error:', error);
-        alert('There was an error sending your message.');
+        });
     });
-});
-
 </script>
+
 
 
 
