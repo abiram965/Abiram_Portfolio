@@ -35,9 +35,17 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Modern 3D Portfolio Styles -->
+    <link href="css/modern.css" rel="stylesheet">
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51" class="modern-portfolio">
+    <!-- Loading Screen -->
+    <div class="loading-overlay">
+        <div class="loader"></div>
+    </div>
+
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -48,7 +56,7 @@
 
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+    <nav class="navbar navbar-expand-lg glass-nav navbar-dark fixed-top shadow-lg py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
         <a href="index.html" class="navbar-brand d-block d-lg-none">
             <h1 class="text-primary fw-bold m-0">Abiram</h1>
         </a>
@@ -76,17 +84,19 @@
     <!-- Navbar End -->
 
 
-    <!-- Header Start -->
-    <div class="container-fluid bg-light my-6 mt-0" id="home">
+    <!-- Hero Section Start -->
+    <div class="container-fluid hero-section section-modern" id="home">
         <div class="container">
             <div class="row g-5 align-items-center">
-                <div class="col-lg-6 py-6 pb-0 pt-lg-0">
-                    <h3 class="text-primary mb-3">I'm</h3>
-                    <h1 class="display-3 mb-3">Abiram Ramasamy</h1>
-                    <h2 class="typed-text-output d-inline"></h2>
+                <div class="col-lg-6 py-6 pb-0 pt-lg-0 hero-content">
+                    <h3 class="text-primary mb-3 fade-in">I'm</h3>
+                    <h1 class="hero-title mb-3 animate-text">Abiram Ramasamy</h1>
+                    <h2 class="hero-subtitle typed-text-output d-inline"></h2>
                     <div class="typed-text d-none">Python Developer 🤖, Graphic Designer, Student, AI Engineer</div>
-                    <div class="d-flex align-items-center pt-5">
-                        <a href="img/Abiram_Resume.pdf" class="btn btn-primary py-3 px-4 me-5">Download CV</a>
+                    <div class="d-flex align-items-center pt-5 hero-buttons">
+                        <a href="img/Abiram_Resume.pdf" class="btn btn-modern me-4">
+                            <i class="fas fa-download me-2"></i>Download CV
+                        </a>
                         <button type="button" class="btn-play" data-bs-toggle="modal"
                             data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
                             <span></span>
@@ -94,23 +104,28 @@
                         <h5 class="ms-4 mb-0 d-none d-sm-block">Play Video</h5>
                     </div>
 
-
-
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-primary me-2" href="https://www.linkedin.com/in/abiram-r/"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-square btn-primary me-2" href="https://github.com/abiram965"><i class="fab fa-github"></i></a>
-                        <a class="btn btn-square btn-primary me-2" href="https://www.instagram.com/abiram_ramasamy/"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-square btn-primary me-2" href="https://www.facebook.com/profile.php?id=100009310521903"><i class="fab fa-facebook-f"></i></a>
+                    <div class="social-links">
+                        <a class="social-link" href="https://www.linkedin.com/in/abiram-r/">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="social-link" href="https://github.com/abiram965">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a class="social-link" href="https://www.instagram.com/abiram_ramasamy/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="social-link" href="https://www.facebook.com/profile.php?id=100009310521903">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
                     </div>
-
                 </div>
-                <div class="col-lg-6">
-                    <img class="img-fluid" src="img/Head.png" alt="">
+                <div class="col-lg-6 hero-image">
+                    <img class="img-fluid floating" src="img/Head.png" alt="Abiram Ramasamy">
                 </div>
             </div>
         </div>
     </div>
-    <!-- Header End -->
+    <!-- Hero Section End -->
 
 
     <!-- Video Modal Start -->
@@ -135,31 +150,44 @@
 
 
     <!-- About Start -->
-    <div class="container-xxl py-6" id="about">
+    <div class="container-xxl section-modern" id="about">
         <div class="container">
             <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="d-flex align-items-center mb-5">
-                        <div class="years flex-shrink-0 text-center me-4">
-                            <h1 class="display-1 mb-0">2</h1>
-                            <h5 class="mb-0">Years</h5>
+                <div class="col-lg-6 slide-in-left">
+                    <div class="glass-card p-4 mb-5">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="years flex-shrink-0 text-center me-4">
+                                <h1 class="display-1 mb-0 text-primary">2</h1>
+                                <h5 class="mb-0">Years</h5>
+                            </div>
+                            <h3 class="lh-base mb-0">of working experience as a Python Developer & Graphic Designer</h3>
                         </div>
-                        <h3 class="lh-base mb-0">of working experience as a Python Developer & Graphic Designer</h3>
+                        <p class="mb-4 text-secondary">I design and develop the consumer products with creative ability and
+                            hands-on approach which satisfies the customers' and markets' needs and trends.</p>
+                        <div class="feature-list">
+                            <p class="mb-3 d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary me-3"></i>
+                                <span>Easy Communication</span>
+                            </p>
+                            <p class="mb-3 d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary me-3"></i>
+                                <span>High Quality Product</span>
+                            </p>
+                            <p class="mb-3 d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary me-3"></i>
+                                <span>On Time Project Delivery</span>
+                            </p>
+                        </div>
+                        <a class="btn btn-modern mt-3" href="#contact">Get In Touch</a>
                     </div>
-                    <p class="mb-4">I design and develop the consumer products with creative ability and
-                        hands-on approach which stisfies the customers' and markets' needs and trends.</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Easy Communication</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>High Quality Product</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>On Time Project Delivery</p>
-                    <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-6 slide-in-right">
                     <div class="row g-3 mb-4">
                         <div class="col-sm-6">
-                            <img class="img-fluid rounded" src="img/about-1.jpg" alt="">
+                            <img class="img-fluid rounded floating" src="img/about-1.jpg" alt="About Abiram">
                         </div>
                         <div class="col-sm-6">
-                            <img class="img-fluid rounded" src="img/about-2.jpg" alt="">
+                            <img class="img-fluid rounded floating-delayed" src="img/about-2.jpg" alt="Abiram's Work">
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-3">
@@ -179,129 +207,206 @@
     <!-- About End -->
 
 
-    <!-- Expertise Start -->
-    <div class="container-xxl py-6 pb-5" id="skill">
+    <!-- Skills Section Start -->
+    <div class="container-xxl section-modern" id="skill">
         <div class="container">
             <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="display-5 mb-5">Skills & Experience</h1>
-                    <p class="mb-4">I have various Knowledge in various Fields with the skills and experience i develop abd deploye different types of project</p>
-                    <h3 class="mb-4">My Skills</h3>
-                    <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Python</h6>
-                                    <h6 class="font-weight-bold">90%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+                <div class="col-lg-6 slide-in-left">
+                    <h1 class="section-title text-start">Skills & Experience</h1>
+                    <p class="mb-4 text-secondary">I have various knowledge in various fields with the skills and experience I develop and deploy different types of projects</p>
+                    
+                    <!-- Modern Progress Bars -->
+                    <h3 class="mb-4 text-primary">Technical Skills</h3>
+                    <div class="skills-list">
+                        <div class="skill-item glass-card p-3 mb-3 fade-in">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h6 class="mb-0 fw-bold">Python</h6>
+                                <span class="skill-percentage">90%</span>
                             </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Machine Learning</h6>
-                                    <h6 class="font-weight-bold">85%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Adobe Photoshop</h6>
-                                    <h6 class="font-weight-bold">90%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="90"></div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Development</h6>
-                                    <h6 class="font-weight-bold">90%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+                        
+                        <div class="skill-item glass-card p-3 mb-3 fade-in">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h6 class="mb-0 fw-bold">Machine Learning</h6>
+                                <span class="skill-percentage">85%</span>
                             </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Web Designing</h6>
-                                    <h6 class="font-weight-bold">95%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="85"></div>
                             </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">MySQL</h6>
-                                    <h6 class="font-weight-bold">85%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+                        </div>
+                        
+                        <div class="skill-item glass-card p-3 mb-3 fade-in">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h6 class="mb-0 fw-bold">Web Development</h6>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="95"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item glass-card p-3 mb-3 fade-in">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h6 class="mb-0 fw-bold">Adobe Photoshop</h6>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="90"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item glass-card p-3 mb-3 fade-in">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h6 class="mb-0 fw-bold">MySQL</h6>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="85"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
+                <div class="col-lg-6 slide-in-right">
+                    <!-- Circular Progress Indicators -->
+                    <h3 class="mb-4 text-center text-primary">Technical Proficiency</h3>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-sm-6 mb-4 text-center">
+                            <div class="progress-circle fade-in" data-percentage="90">
+                                <svg viewBox="0 0 100 100">
+                                    <defs>
+                                        <linearGradient id="gradient-python" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#3776ab;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#3776ab;stop-opacity:0.6" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
+                                    <circle class="progress-bar" cx="50" cy="50" r="45" stroke="url(#gradient-python)"></circle>
+                                </svg>
+                                <div class="progress-text">0%</div>
+                            </div>
+                            <h6 class="mt-3">Python</h6>
+                        </div>
+                        
+                        <div class="col-md-6 col-sm-6 mb-4 text-center">
+                            <div class="progress-circle fade-in" data-percentage="85">
+                                <svg viewBox="0 0 100 100">
+                                    <defs>
+                                        <linearGradient id="gradient-ml" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#ff6b35;stop-opacity:0.6" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
+                                    <circle class="progress-bar" cx="50" cy="50" r="45" stroke="url(#gradient-ml)"></circle>
+                                </svg>
+                                <div class="progress-text">0%</div>
+                            </div>
+                            <h6 class="mt-3">Machine Learning</h6>
+                        </div>
+                        
+                        <div class="col-md-6 col-sm-6 mb-4 text-center">
+                            <div class="progress-circle fade-in" data-percentage="95">
+                                <svg viewBox="0 0 100 100">
+                                    <defs>
+                                        <linearGradient id="gradient-web" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#61dafb;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#61dafb;stop-opacity:0.6" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
+                                    <circle class="progress-bar" cx="50" cy="50" r="45" stroke="url(#gradient-web)"></circle>
+                                </svg>
+                                <div class="progress-text">0%</div>
+                            </div>
+                            <h6 class="mt-3">Web Design</h6>
+                        </div>
+                        
+                        <div class="col-md-6 col-sm-6 mb-4 text-center">
+                            <div class="progress-circle fade-in" data-percentage="85">
+                                <svg viewBox="0 0 100 100">
+                                    <defs>
+                                        <linearGradient id="gradient-mysql" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#f29111;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#f29111;stop-opacity:0.6" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
+                                    <circle class="progress-bar" cx="50" cy="50" r="45" stroke="url(#gradient-mysql)"></circle>
+                                </svg>
+                                <div class="progress-text">0%</div>
+                            </div>
+                            <h6 class="mt-3">MySQL</h6>
+                        </div>
+                    </div>
+
+                    <!-- Experience Timeline -->
+                    <div class="mt-5">
+                        <ul class="nav nav-pills rounded glass-card p-2 mb-4 justify-content-center">
                         <li class="nav-item w-50">
-                            <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-1">Experience</button>
+                            <button class="nav-link w-100 py-3 fs-5 active glass-card" data-bs-toggle="pill" href="#tab-1">Experience</button>
                         </li>
                         <li class="nav-item w-50">
-                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2">Education</button>
+                            <button class="nav-link w-100 py-3 fs-5 glass-card" data-bs-toggle="pill" href="#tab-2">Education</button>
                         </li>
                     </ul>
                     <div class="tab-content">
                         <div id="tab-1" class="tab-pane fade show p-0 active">
-                            <div class="row gy-5 gx-4">
+                            <div class="row gy-4 gx-4">
                                 <div class="col-sm-6">
-                                    <h5> Python Developer</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">Oct 2023  - Present </p>
-                                    <h6 class="mb-0">Hicup Innovations Pvt  Ltd, India</h6>
+                                    <div class="glass-card p-4 h-100 fade-in">
+                                        <h5 class="text-primary">Python Developer</h5>
+                                        <div class="bg-primary" style="height: 3px; width: 60px; margin: 10px 0;"></div>
+                                        <p class="text-secondary mb-1">Oct 2023 - Present</p>
+                                        <h6 class="mb-0">Hicup Innovations Pvt Ltd, India</h6>
+                                    </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <h5>Graphics Designer</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">Sep 2022 - Dec 2023</p>
-                                    <h6 class="mb-0">Ambimed Healthcare Pvt ltd</h6>
+                                    <div class="glass-card p-4 h-100 fade-in">
+                                        <h5 class="text-primary">Graphics Designer</h5>
+                                        <div class="bg-primary" style="height: 3px; width: 60px; margin: 10px 0;"></div>
+                                        <p class="text-secondary mb-1">Sep 2022 - Dec 2023</p>
+                                        <h6 class="mb-0">Ambimed Healthcare Pvt ltd</h6>
+                                    </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <h5>System Engineer</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">Nov - Dec 2023</p>
-                                    <h6 class="mb-0">Welcome Associates</h6>
+                                    <div class="glass-card p-4 h-100 fade-in">
+                                        <h5 class="text-primary">System Engineer</h5>
+                                        <div class="bg-primary" style="height: 3px; width: 60px; margin: 10px 0;"></div>
+                                        <p class="text-secondary mb-1">Nov - Dec 2023</p>
+                                        <h6 class="mb-0">Welcome Associates</h6>
+                                    </div>
                                 </div>
-                               
                             </div>
                         </div>
                         <div id="tab-2" class="tab-pane fade show p-0">
-                            <div class="row gy-5 gx-4">
+                            <div class="row gy-4 gx-4">
                                 <div class="col-sm-6">
-                                    <h5>Bachelor of Artificial Intelligence and Machine Learning</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2021 - 2025</p>
-                                    <h6 class="mb-0">SNS COLLEGE OF TECHNOLOGY</h6>
+                                    <div class="glass-card p-4 h-100 fade-in">
+                                        <h5 class="text-primary">Bachelor of AI & ML</h5>
+                                        <div class="bg-primary" style="height: 3px; width: 60px; margin: 10px 0;"></div>
+                                        <p class="text-secondary mb-1">2021 - 2025</p>
+                                        <h6 class="mb-0">SNS College of Technology</h6>
+                                    </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <h5>All India Senior School Certificate Examination (AISSCE)</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2020 - 2021</p>
-                                    <h6 class="mb-0">Jawahar Higher  Sec School, CBSE</h6>
+                                    <div class="glass-card p-4 h-100 fade-in">
+                                        <h5 class="text-primary">AISSCE (12th)</h5>
+                                        <div class="bg-primary" style="height: 3px; width: 60px; margin: 10px 0;"></div>
+                                        <p class="text-secondary mb-1">2020 - 2021</p>
+                                        <h6 class="mb-0">Jawahar Higher Sec School, CBSE</h6>
+                                    </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <h5>All India Secondary School Examination (AISSE)</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2018 - 2019</p>
-                                    <h6 class="mb-0">Jawahar Higher  Sec School, CBSE</h6>
+                                    <div class="glass-card p-4 h-100 fade-in">
+                                        <h5 class="text-primary">AISSE (10th)</h5>
+                                        <div class="bg-primary" style="height: 3px; width: 60px; margin: 10px 0;"></div>
+                                        <p class="text-secondary mb-1">2018 - 2019</p>
+                                        <h6 class="mb-0">Jawahar Higher Sec School, CBSE</h6>
+                                    </div>
                                 </div>
-                                
                             </div>
                         </div>
                     </div>
@@ -309,39 +414,68 @@
             </div>
         </div>
     </div>
-    <!-- Expertise End -->
+    <!-- Skills Section End -->
 
 
-    <!-- Service Start -->
-    <div class="container-fluid bg-light my-5 py-6" id="service">
+    <!-- Services Section Start -->
+    <div class="container-fluid section-modern" id="service">
         <div class="container">
-            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="row g-5 mb-5 align-items-center">
                 <div class="col-lg-6">
-                    <h1 class="display-5 mb-0">My Services</h1>
+                    <h1 class="section-title text-start">My Services</h1>
+                    <p class="text-secondary">Comprehensive solutions tailored to your needs</p>
                 </div>
                 <div class="col-lg-6 text-lg-end">
-                    <a class="btn btn-primary py-3 px-5" href="">Hire Me</a>
+                    <a class="btn btn-modern" href="#contact">Hire Me</a>
                 </div>
             </div>
             <div class="row g-4">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                        <div class="bg-icon flex-shrink-0 mb-3">
-                            <i class="fa fa-crop-alt fa-2x text-dark"></i>
+                <div class="col-lg-6 fade-in">
+                    <div class="glass-card service-card p-5 h-100">
+                        <div class="service-icon mb-4">
+                            <i class="fas fa-robot fa-3x text-primary"></i>
                         </div>
-                        <div class="ms-sm-4">
-                            <h4 class="mb-3">AI & Machine Learning</h4>
-                            <h6 class="mb-3">Start from <span class="text-primary">₹999</span></h6>
-                            <span>Unlock the potential of data with our bespoke machine learning projects. Expert solutions tailored to your needs, delivering innovation at every turn.</span>
-                        </div>
+                        <h4 class="mb-3 text-primary">AI & Machine Learning</h4>
+                        <h6 class="mb-3">Start from <span class="text-secondary">₹999</span></h6>
+                        <p class="text-secondary">Unlock the potential of data with our bespoke machine learning projects. Expert solutions tailored to your needs, delivering innovation at every turn.</p>
+                        <a href="#contact" class="btn btn-outline-modern mt-3">Learn More</a>
                     </div>
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                        <div class="bg-icon flex-shrink-0 mb-3">
-                            <i class="fa fa-code-branch fa-2x text-dark"></i>
+                
+                <div class="col-lg-6 fade-in">
+                    <div class="glass-card service-card p-5 h-100">
+                        <div class="service-icon mb-4">
+                            <i class="fas fa-palette fa-3x text-primary"></i>
                         </div>
-                        <div class="ms-sm-4">
+                        <h4 class="mb-3 text-primary">Graphic Design</h4>
+                        <h6 class="mb-3">Start from <span class="text-secondary">₹99</span></h6>
+                        <p class="text-secondary">Transforming concepts into captivating visuals. Elevate your brand with our innovative graphic design solutions.</p>
+                        <a href="#contact" class="btn btn-outline-modern mt-3">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 fade-in">
+                    <div class="glass-card service-card p-5 h-100">
+                        <div class="service-icon mb-4">
+                            <i class="fab fa-python fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mb-3 text-primary">Python Development</h4>
+                        <h6 class="mb-3">Start from <span class="text-secondary">₹999</span></h6>
+                        <p class="text-secondary">Empowering businesses with Python-based solutions. Harness the versatility of Python for your next project.</p>
+                        <a href="#contact" class="btn btn-outline-modern mt-3">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 fade-in">
+                    <div class="glass-card service-card p-5 h-100">
+                        <div class="service-icon mb-4">
+                            <i class="fas fa-globe fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mb-3 text-primary">Web Development</h4>
+                        <h6 class="mb-3">Start from <span class="text-secondary">₹599</span></h6>
+                        <p class="text-secondary">Crafting captivating digital experiences. Elevate your online presence with our expert web design solutions.</p>
+                        <a href="#contact" class="btn btn-outline-modern mt-3">Learn More</a>
+                    </div>
                             <h4 class="mb-3">Graphic Design</h4>
                             <h6 class="mb-3">Start from <span class="text-primary">₹99</span></h6>
                             <span>Transforming concepts into captivating visuals. Elevate your brand with our innovative graphic design solutions.</span>
@@ -578,63 +712,101 @@
 
     -->
     <!-- Testimonial End -->
-<!-- Contact Start -->
-<div class="container-xxl pb-5" id="contact">
-    <div class="container py-5">
-        <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="col-lg-6">
-                <h1 class="display-5 mb-0">Let's Work Together</h1>
-            </div>
-            <div class="col-lg-6 text-lg-end">
-                <a class="btn btn-primary py-3 px-5" href="">Say Hello</a>
-            </div>
-        </div>
-        <div class="row g-5">
-            <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <p class="mb-2">My Location:</p>
-                <h3 class="fw-bold">Vadalur, Tamil Nadu</h3>
-                <hr class="w-100">
-                <p class="mb-2">Call me:</p>
-                <h3 class="fw-bold">+918778650059</h3>
-                <hr class="w-100">
-                <p class="mb-2">Mail me:</p>
-                <h3 class="fw-bold">abiramr2003@gmail.com</h3>
-                <hr class="w-100">
-                <p class="mb-2">Follow me:</p>
-                <div class="d-flex pt-2">
-                    <a class="btn btn-square btn-primary me-2" href="https://www.linkedin.com/in/abiram-r/"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-square btn-primary me-2" href="https://github.com/abiram965"><i class="fab fa-github"></i></a>
-                    <a class="btn btn-square btn-primary me-2" href="https://www.instagram.com/abiram_ramasamy/"><i class="fab fa-instagram"></i></a>
-                    <a class="btn btn-square btn-primary me-2" href="https://www.facebook.com/profile.php?id=100009310521903"><i class="fab fa-facebook-f"></i></a>
+    <!-- Contact Section Start -->
+    <div class="container-xxl section-modern" id="contact">
+        <div class="container py-5">
+            <div class="row g-5 mb-5 align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="section-title text-start">Let's Work Together</h1>
+                    <p class="text-secondary">Ready to bring your ideas to life? Let's create something amazing together.</p>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-modern" href="mailto:abiramr2003@gmail.com">Say Hello</a>
                 </div>
             </div>
-            <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <p class="mb-4">The contact form is currently inactive. Get a functional and working contact  <a href="https://www.linkedin.com/in/abiram-r/">Connect Here</a>.</p>
-                <form id="contactForm">
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                <label for="name">Your Name</label>
+            <div class="row g-5">
+                <div class="col-lg-5 col-md-6 slide-in-left">
+                    <div class="glass-card p-4">
+                        <div class="contact-info-item mb-4">
+                            <div class="contact-icon mb-3">
+                                <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
+                            </div>
+                            <p class="mb-2 text-secondary">My Location:</p>
+                            <h5 class="fw-bold text-primary">Vadalur, Tamil Nadu</h5>
+                        </div>
+                        
+                        <div class="contact-info-item mb-4">
+                            <div class="contact-icon mb-3">
+                                <i class="fas fa-phone fa-2x text-primary"></i>
+                            </div>
+                            <p class="mb-2 text-secondary">Call me:</p>
+                            <h5 class="fw-bold text-primary">+918778650059</h5>
+                        </div>
+                        
+                        <div class="contact-info-item mb-4">
+                            <div class="contact-icon mb-3">
+                                <i class="fas fa-envelope fa-2x text-primary"></i>
+                            </div>
+                            <p class="mb-2 text-secondary">Mail me:</p>
+                            <h5 class="fw-bold text-primary">abiramr2003@gmail.com</h5>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <p class="mb-3 text-secondary">Follow me:</p>
+                            <div class="social-links">
+                                <a class="social-link" href="https://www.linkedin.com/in/abiram-r/">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a class="social-link" href="https://github.com/abiram965">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a class="social-link" href="https://www.instagram.com/abiram_ramasamy/">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a class="social-link" href="https://www.facebook.com/profile.php?id=100009310521903">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-floating">
-                                <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                <label for="email">Your Email</label>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-6 slide-in-right">
+                    <div class="contact-form">
+                        <h4 class="mb-4 text-primary">Send me a message</h4>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                                        <label for="name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                                        <label for="subject">Subject</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 120px" required></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button class="btn btn-submit" type="submit">
+                                        <i class="fas fa-paper-plane me-2"></i>Send Message
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                <label for="subject">Subject</label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="form-floating">
-                                <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                <label for="message">Message</label>
-                            </div>
+                        </form>
+                    </div>
                         </div>
                         <div class="col-12">
                             <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
@@ -745,9 +917,23 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+    
+    <!-- Modern 3D Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
+    <!-- Modern 3D Portfolio Scripts -->
+    <script src="js/three-scene.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/modern.js"></script>
+    
+    <!-- Fallback System for Offline/Blocked CDNs -->
+    <script src="js/fallback.js"></script>
 </body>
 
 </html>
