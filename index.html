@@ -35,9 +35,17 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Modern 3D Portfolio Styles -->
+    <link href="css/modern.css" rel="stylesheet">
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51" class="modern-portfolio">
+    <!-- Loading Screen -->
+    <div class="loading-overlay">
+        <div class="loader"></div>
+    </div>
+
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -48,7 +56,7 @@
 
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+    <nav class="navbar navbar-expand-lg glass-nav navbar-dark fixed-top shadow-lg py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
         <a href="index.html" class="navbar-brand d-block d-lg-none">
             <h1 class="text-primary fw-bold m-0">Abiram</h1>
         </a>
@@ -76,17 +84,19 @@
     <!-- Navbar End -->
 
 
-    <!-- Header Start -->
-    <div class="container-fluid bg-light my-6 mt-0" id="home">
+    <!-- Hero Section Start -->
+    <div class="container-fluid hero-section section-modern" id="home">
         <div class="container">
             <div class="row g-5 align-items-center">
-                <div class="col-lg-6 py-6 pb-0 pt-lg-0">
-                    <h3 class="text-primary mb-3">I'm</h3>
-                    <h1 class="display-3 mb-3">Abiram Ramasamy</h1>
-                    <h2 class="typed-text-output d-inline"></h2>
+                <div class="col-lg-6 py-6 pb-0 pt-lg-0 hero-content">
+                    <h3 class="text-primary mb-3 fade-in">I'm</h3>
+                    <h1 class="hero-title mb-3 animate-text">Abiram Ramasamy</h1>
+                    <h2 class="hero-subtitle typed-text-output d-inline"></h2>
                     <div class="typed-text d-none">Python Developer 🤖, Graphic Designer, Student, AI Engineer</div>
-                    <div class="d-flex align-items-center pt-5">
-                        <a href="img/Abiram_Resume.pdf" class="btn btn-primary py-3 px-4 me-5">Download CV</a>
+                    <div class="d-flex align-items-center pt-5 hero-buttons">
+                        <a href="img/Abiram_Resume.pdf" class="btn btn-modern me-4">
+                            <i class="fas fa-download me-2"></i>Download CV
+                        </a>
                         <button type="button" class="btn-play" data-bs-toggle="modal"
                             data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
                             <span></span>
@@ -94,23 +104,28 @@
                         <h5 class="ms-4 mb-0 d-none d-sm-block">Play Video</h5>
                     </div>
 
-
-
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-primary me-2" href="https://www.linkedin.com/in/abiram-r/"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-square btn-primary me-2" href="https://github.com/abiram965"><i class="fab fa-github"></i></a>
-                        <a class="btn btn-square btn-primary me-2" href="https://www.instagram.com/abiram_ramasamy/"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-square btn-primary me-2" href="https://www.facebook.com/profile.php?id=100009310521903"><i class="fab fa-facebook-f"></i></a>
+                    <div class="social-links">
+                        <a class="social-link" href="https://www.linkedin.com/in/abiram-r/">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="social-link" href="https://github.com/abiram965">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a class="social-link" href="https://www.instagram.com/abiram_ramasamy/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="social-link" href="https://www.facebook.com/profile.php?id=100009310521903">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
                     </div>
-
                 </div>
-                <div class="col-lg-6">
-                    <img class="img-fluid" src="img/Head.png" alt="">
+                <div class="col-lg-6 hero-image">
+                    <img class="img-fluid floating" src="img/Head.png" alt="Abiram Ramasamy">
                 </div>
             </div>
         </div>
     </div>
-    <!-- Header End -->
+    <!-- Hero Section End -->
 
 
     <!-- Video Modal Start -->
@@ -135,31 +150,44 @@
 
 
     <!-- About Start -->
-    <div class="container-xxl py-6" id="about">
+    <div class="container-xxl section-modern" id="about">
         <div class="container">
             <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="d-flex align-items-center mb-5">
-                        <div class="years flex-shrink-0 text-center me-4">
-                            <h1 class="display-1 mb-0">2</h1>
-                            <h5 class="mb-0">Years</h5>
+                <div class="col-lg-6 slide-in-left">
+                    <div class="glass-card p-4 mb-5">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="years flex-shrink-0 text-center me-4">
+                                <h1 class="display-1 mb-0 text-primary">2</h1>
+                                <h5 class="mb-0">Years</h5>
+                            </div>
+                            <h3 class="lh-base mb-0">of working experience as a Python Developer & Graphic Designer</h3>
                         </div>
-                        <h3 class="lh-base mb-0">of working experience as a Python Developer & Graphic Designer</h3>
+                        <p class="mb-4 text-secondary">I design and develop the consumer products with creative ability and
+                            hands-on approach which satisfies the customers' and markets' needs and trends.</p>
+                        <div class="feature-list">
+                            <p class="mb-3 d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary me-3"></i>
+                                <span>Easy Communication</span>
+                            </p>
+                            <p class="mb-3 d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary me-3"></i>
+                                <span>High Quality Product</span>
+                            </p>
+                            <p class="mb-3 d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary me-3"></i>
+                                <span>On Time Project Delivery</span>
+                            </p>
+                        </div>
+                        <a class="btn btn-modern mt-3" href="#contact">Get In Touch</a>
                     </div>
-                    <p class="mb-4">I design and develop the consumer products with creative ability and
-                        hands-on approach which stisfies the customers' and markets' needs and trends.</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Easy Communication</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>High Quality Product</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>On Time Project Delivery</p>
-                    <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-6 slide-in-right">
                     <div class="row g-3 mb-4">
                         <div class="col-sm-6">
-                            <img class="img-fluid rounded" src="img/about-1.jpg" alt="">
+                            <img class="img-fluid rounded floating" src="img/about-1.jpg" alt="About Abiram">
                         </div>
                         <div class="col-sm-6">
-                            <img class="img-fluid rounded" src="img/about-2.jpg" alt="">
+                            <img class="img-fluid rounded floating-delayed" src="img/about-2.jpg" alt="Abiram's Work">
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-3">
@@ -745,9 +773,20 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+    
+    <!-- Modern 3D Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
+    <!-- Modern 3D Portfolio Scripts -->
+    <script src="js/three-scene.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/modern.js"></script>
 </body>
 
 </html>
